@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+   
+   
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+
+    <script src="~/Scripts/Mapa.js"></script>
+
+    
+</head>
+<body>
+   
+        <div id="area" class="pesquisa ">
+            <fieldset>
+                <legend class="legend label-local">Pesquisar</legend>
+
+                <div id="Labels">
+                    <p> <label>Latitude:</label><br /> </p>
+                    <p> <label class="label-local">Longitude:</label><br /> </p>
+                    <p> <label class="label-local">Título:</label><br /> </p>
+                </div>
+                <div id="Inputs">
+                    <p><input type="text" id="latitude" value="-15.7598638" name="map.Latitude" /> <br /></p>
+                    <p><input type="text" id="longitude" value="-47.8970922" name="map.Longitude" /><br /></p>
+                    <p><input type="text" id="titulo" value="Hello!!" name="map.Titulo" /> <br /></p>
+                    <p><button class="btn-default btn-lg" onclick="initialize()">Pesquisar</button></p>
+                </div>
+            </fieldset>
+        </div>
+
+        <div id="tabela" class="">
+            <table class="table table-hover label-local">
+                <thead>
+                    <tr>
+                        <th>Longitude</th>
+                        <th>Latitude</th>
+                        <th>Remover</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>teste</td>
+                        <td>teste</td>
+                        <td>teste</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><button class="btn-default btn-lg" onclick="changeGradient()">Heat Map</button></p>
+        </div>
+
+        <div id="map-canvas" class="mapa "></div>
+        @RenderBody()
+    
+
+</body>
+</html>
