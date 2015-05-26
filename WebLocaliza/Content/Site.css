@@ -170,50 +170,36 @@ body {
 .formulario-pesquisa {
 }
 
-#area {
-position:relative;
-top:5%;
-right:5%;
-text-decoration-color:rgba(255,255,255,.75);
-}
-
 .label-local {
 color:#fff;
 }
 
 #map-canvas {
-position:relative;
-left:5%;
+top:5%;
 }
 .mapa {
-display:inline-block;
-float:left;
-top:1px;
 border:solid #000;
-width:55%;
-height:70%;
+width:60%;
+height:80%;
 }
 
-#Labels {
+#Labels{
 float:left;
-position:relative;
-top:6%;
-right:3%;
 }
 
 #Inputs {
-float:right;
 position:relative;
+}
+
+#tabela{
+top:15%;
+left:5%;
+float:right;
+}
+
+#formulario{
+float:left;
+left:5%;
 top:5%;
-right:5%;
+text-decoration-color:rgba(255,255,255,.75);
 }
-
-#tabela {
-float:right;
-position:relative;
-top:50%;
-left:18%;
-}
-
-.contai {
-width:100%;}
