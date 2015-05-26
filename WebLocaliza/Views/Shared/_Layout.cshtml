@@ -21,25 +21,27 @@
 </head>
 <body>
    
-        <div id="area" class="pesquisa ">
-            <fieldset>
-                <legend class="legend label-local">Pesquisar</legend>
+        <div id="map-canvas" class="mapa col-xs-12 col-lg-8 col-sm-6"></div>
 
-                <div id="Labels">
-                    <p> <label>Latitude:</label><br /> </p>
-                    <p> <label class="label-local">Longitude:</label><br /> </p>
-                    <p> <label class="label-local">Título:</label><br /> </p>
-                </div>
-                <div id="Inputs">
-                    <p><input type="text" id="latitude" value="-15.7598638" name="map.Latitude" /> <br /></p>
-                    <p><input type="text" id="longitude" value="-47.8970922" name="map.Longitude" /><br /></p>
-                    <p><input type="text" id="titulo" value="Hello!!" name="map.Titulo" /> <br /></p>
-                    <p><button class="btn-default btn-lg" onclick="initialize()">Pesquisar</button></p>
-                </div>
-            </fieldset>
-        </div>
+    <div id="formulario" class="pesquisa col-xs-6 col-lg-4">
+        <fieldset>
+            <legend class="legend label-local">Pesquisar</legend>
 
-        <div id="tabela" class="">
+            <div id="Labels">
+                <p> <label class="label-local">Latitude:</label><br /> </p>
+                <p> <label class="label-local">Longitude:</label><br /> </p>
+                <p> <label class="label-local">Título:</label><br /> </p>
+            </div>
+            <div id="Inputs">
+                <p><input type="text" id="latitude" value="-15.7598638" name="map.Latitude" /> <br /></p>
+                <p><input type="text" id="longitude" value="-47.8970922" name="map.Longitude" /><br /></p>
+                <p><input type="text" id="titulo" value="Hello!!" name="map.Titulo" /> <br /></p>
+                <p><button class="btn-default btn-lg" onclick="initialize()">Pesquisar</button></p>
+            </div>
+        </fieldset>
+    </div>
+
+        <div id="tabela" class="col-xs-6 col-lg-4">
             <table class="table table-hover label-local">
                 <thead>
                     <tr>
@@ -60,9 +62,7 @@
             <p><button class="btn-default btn-lg" onclick="changeGradient()">Heat Map</button></p>
         </div>
 
-        <div id="map-canvas" class="mapa "></div>
-        @RenderBody()
-    
+           @RenderBody()
 
 </body>
 </html>
