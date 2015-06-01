@@ -19,7 +19,6 @@ a:hover {
   border: 1px solid #fff;
 }
 
-
 /*
  * Base structure
  */
@@ -173,33 +172,37 @@ body {
 .label-local {
 color:#fff;
 }
-
-#map-canvas {
-top:5%;
-}
 .mapa {
 border:solid #000;
 width:60%;
-height:80%;
+height:70%;
 }
 
 #Labels{
-float:left;
+    float:left;
 }
 
 #Inputs {
-position:relative;
+    position:relative;
+}
+
+#map-canvas {
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    width:60%;
 }
 
 #tabela{
-top:15%;
-left:5%;
-float:right;
+    top:15%;
+    left:5%;
+    right:5%;
+    float:inherit;
 }
 
 #formulario{
-float:left;
-left:5%;
-top:5%;
-text-decoration-color:rgba(255,255,255,.75);
+    float:inherit;
+    left:5%;
+    top:5%;
+    text-decoration-color:rgba(255,255,255,.75);
 }
