@@ -1,4 +1,9 @@
- function initialize()
+
+    var map;
+    var infowindow;
+
+
+function init()
         {
 
             var lat = document.getElementById('latitude').value.replace(',', '.');
@@ -27,7 +32,7 @@
             });
             
          }
-        function Pesquisa()
+    function Pesquisa()
         {
              var lat = document.getElementById('latitude').value.replace(',', '.');
              var long = document.getElementsById('longitude').value.replace(',', '.');
@@ -49,11 +54,11 @@
                  map: map,//Objeto mapa 
                  title: titulo//string que será exibida quando passar o mouse no marker 
              });
- }
+        }
 
  function pesquisar() {
      document.getElementById('teste').innerHTML = '';
-     initialize();
+     init();
  }
 
  function callback(results, status) {

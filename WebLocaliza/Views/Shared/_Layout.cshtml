@@ -17,53 +17,56 @@
 
     <script src="~/Scripts/Mapa.js"></script>    
 </head>
-<body>
+<body onload="init()">
+
+
+    <div id="map-canvas" class="mapa container col-xs-12 col-lg-8 col-sm-6"></div>
+
+    <div id="formulario" class="pesquisa col-xs-6 col-lg-4">
+        <fieldset>
+            <legend class="legend label-local">Pesquisar</legend>
+            <label class="label-local">Latitude:</label>
+            <p><input type="text" id="latitude" value="-15.7598638" name="map.Latitude" /> <br /></p>
+            <label class="label-local">Longitude:</label>
+            <p><input type="text" id="longitude" value="-47.8970922" name="map.Longitude" /><br /></p>
+            <label class="label-local">Título:</label>
+            <p><input type="text" id="titulo" value="Hello!!" name="map.Titulo" /> <br /></p>
+            <p><button class="btn-default btn-lg" onclick="init()">Pesquisar</button></p>
+        </fieldset>
+    </div>
+
+     <div id="tabela" class="col-xs-6 col-lg-4">
+         <fieldset>
+             <legend class="legend label-local">Pontos</legend>
+             <table id="teste" class="table table-hover label-local">
+                 <thead>
+                     <tr>
+                         <th>Longitude</th>
+                         <th>Latitude</th>
+                         <th>Nome</th>
+                         <th>Remover</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>                        
+                         <td>Longitude</td>
+                         <td>Latitude</td>
+                         <td></td>
+                         <td><a href="">Remover</a></td>
+                     </tr>
+                         
+                 </tbody>
+             </table>
+        
    
-    
-        <div id="map-canvas" class="mapa container col-xs-12 col-lg-8 col-sm-6"></div>
 
-        <div id="formulario" class="pesquisa col-xs-6 col-lg-4">
-            <fieldset>
-                <legend class="legend label-local">Pesquisar</legend>
-                <label class="label-local">Latitude:</label>
-                <p><input type="text" id="latitude" value="-15.7598638" name="map.Latitude" /> <br /></p>
-                <label class="label-local">Longitude:</label>
-                <p><input type="text" id="longitude" value="-47.8970922" name="map.Longitude" /><br /></p>
-                <label class="label-local">Título:</label>
-                <p><input type="text" id="titulo" value="Hello!!" name="map.Titulo" /> <br /></p>
-                <p><button class="btn-default btn-lg" onclick="initialize()">Pesquisar</button></p>
 
-            </fieldset>
-        </div>
+            <p><button class="btn btn-default btn-lg" onclick="init()">Novo ponto</button></p>
 
-        <div id="tabela" class="col-xs-6 col-lg-4">
-            <fieldset>
-                <legend class="legend label-local">Pontos</legend>
-                <table class="table table-hover label-local">
-                    <thead>
-                        <tr>
-                            <th>Longitude</th>
-                            <th>Latitude</th>
-                            <th>Remover</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td><a href="">Remover</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                
-
-                <p><button class="btn btn-default btn-lg" onclick="Pesquisar()">Novo ponto</button></p>
-
-               <button class="btn btn-default btn-lg" onclick="Pesquisar()">Heat Map</button>
-            </fieldset>
-        </div>
-           @RenderBody()
+            <button class="btn btn-default btn-lg" onclick="init()">Heat Map</button>
+        </fieldset>
+    </div>
+    @RenderBody()
 
 </body>
 </html>

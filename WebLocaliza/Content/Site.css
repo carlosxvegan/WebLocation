@@ -189,19 +189,17 @@ height:70%;
 #map-canvas {
     top: 5%;
     left: 5%;
-    right: 5%;
-    width:60%;
+    width:50%;
 }
 
 #tabela{
     top:15%;
     left:5%;
-    right:5%;
-    float:inherit;
+    float:left;
 }
 
 #formulario{
-    float:inherit;
+    float:left;
     left:5%;
     top:5%;
     text-decoration-color:rgba(255,255,255,.75);
